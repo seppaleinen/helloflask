@@ -19,8 +19,8 @@ def show_post(post_id):
 def post():
     return 'POST'
 
-with app.test_request_context():
-    print url_for('hello')
+#with app.test_request_context():
+#    print url_for('hello')
 
 if __name__ == "__main__":
     #Enable listen to all public IP

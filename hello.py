@@ -31,7 +31,12 @@ def command(cmd):
         cmd = "find ~/IdeaProjects -mindepth 2 -maxdepth 2 -type d -name .git -exec sh -c 'TREE=$( echo {} | sed 's_/\.git__g' ); git --git-dir={} --work-tree=$TREE pull' \;"
     else:
         return 'Not a valid command'
-    result = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE).stdout.read()
+        
+    result = None
+    if not app.config['TESTING']:
+        result = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE).stdout.read()
+    else:
+        result = 'test'
     return result
 
 #with app.test_request_context():

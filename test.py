@@ -35,5 +35,13 @@ class helloTestCase(unittest.TestCase):
         result = self.app.get('/post')
         assert '405 Method Not Allowed' in result.data
 
+    def test_cmd_get_failure(self):
+        result = self.app.get('/command/git')
+        assert '405 Method Not Allowed' in result.data
+
+    def test_cmd_post_test(self):
+        result = self.app.post('/command/git')
+        assert 'test' in result.data
+
 if __name__ == '__main__':
     unittest.main()

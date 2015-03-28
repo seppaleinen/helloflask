@@ -1,12 +1,13 @@
-import os
-import hello
-import unittest
-import tempfile
+import sys
+from os import path
+sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
+from application import views
+from tests import unittest
 
 class helloTestCase(unittest.TestCase):
     def setUp(self):
-        hello.app.config['TESTING'] = True
-        self.app = hello.app.test_client()
+        views.app.config['TESTING'] = True
+        self.app = views.app.test_client()
 
     def tearDown(self):
         self.app = None
@@ -42,6 +43,9 @@ class helloTestCase(unittest.TestCase):
     def test_cmd_post_test(self):
         result = self.app.post('/command/git')
         assert 'test' in result.data
+
+    def runTest():
+        pass
 
 if __name__ == '__main__':
     unittest.main()

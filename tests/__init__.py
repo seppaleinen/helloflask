@@ -1,1 +1,4 @@
 import unittest
+
+STATUS_405 = '405 METHOD NOT ALLOWED'
+STATUS_200 = '200 OK'

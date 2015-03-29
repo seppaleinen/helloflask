@@ -61,7 +61,7 @@ class showUserTestCase(unittest.TestCase):
         assert STATUS_405 in result.status
 
 
-class postIdTestCase(unittest.TestCase):
+class showPostTestCase(unittest.TestCase):
     def setUp(self):
         views.app.config['TESTING'] = True
         self.app = views.app.test_client()
@@ -90,12 +90,32 @@ class postIdTestCase(unittest.TestCase):
 
     def test_show_post_delete(self):
         result = self.app.delete(self.url)
-        assert STATUS_405 in result.status  
+        assert STATUS_405 in result.status
+
+
+class postTestCase(unittest.TestCase):
+    def setUp(self):
+        views.app.config['TESTING'] = True
+        self.app = views.app.test_client()
+        with views.app.test_request_context():
+            self.url = url_for('post')
+
+    def tearDown(self):
+        self.app = None
 
     def test_post_success(self):
-        result = self.app.post('/post')
+        result = self.app.post(self.url)
+        assert STATUS_200 in result.status
         assert 'POST' in result.data
 
-    def test_post_failure(self):
-        result = self.app.get('/post')
-        assert '405 Method Not Allowed' in result.data
+    def test_post_get_failure(self):
+        result = self.app.get(self.url)
+        assert STATUS_405 in result.status
+
+    def test_post_put_failure(self):
+        result = self.app.put(self.url)
+        assert STATUS_405 in result.status
+
+    def test_post_delete_failure(self):
+        result = self.app.delete(self.url)
+        assert STATUS_405 in result.status

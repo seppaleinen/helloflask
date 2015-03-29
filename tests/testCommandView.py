@@ -86,3 +86,12 @@ class updateGit(unittest.TestCase):
         result = self.app.post(self.url)
         assert STATUS_200 in result.status
         assert 'git' in result.data
+
+class run_subprocess(unittest.TestCase):
+    def setUp(self):
+        commandView.app.config['TESTING'] = None
+
+    def test_run_subprocess_echo_hello(self):
+        cmd = "echo hello"
+        result = commandView.__run_subprocess__(cmd=cmd)
+        self.assertEqual('hello\n', result)

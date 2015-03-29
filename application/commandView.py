@@ -1,4 +1,5 @@
 from application import app
+import subprocess
 
 @app.route('/command/remove_torrent', methods=['POST'])
 def remove_torrent():

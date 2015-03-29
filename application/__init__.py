@@ -3,3 +3,4 @@ app = Flask(__name__)
 
 import application.views
 import application.secondView
+import application.commandView

@@ -2,9 +2,8 @@ import sys
 from os import path
 sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
 from application import commandView
-from tests import unittest
 from flask import url_for
-from tests import STATUS_405, STATUS_200
+from tests import STATUS_405, STATUS_200, unittest
 
 class removeTorrent(unittest.TestCase):
     def setUp(self):

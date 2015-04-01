@@ -7,3 +7,9 @@ install: pip install -r requirements.txt
 script: coverage run --source application runtests.py
 
 after_success: coveralls
+
+deploy:
+  provider: heroku
+  buildpack: python
+  api_key: 1c26a711-07cf-47be-a337-c70df8498c75
+  app: davidsflask

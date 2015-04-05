@@ -8,6 +8,10 @@ script: coverage run --source application runtests.py
 
 after_success: coveralls
 
+env:
+  global:
+    - SECURE="Q+MhzUQ83n40pBzXCAXThBM/Mi+UqdqtE3j2xv0E3K18kHWHZVXXlhJeeTJq5FhqAzV/JCYHUgJL78PCYlzYiSXt90gN0eTr2inOMMHEwtHfEVdZ7z8CkK7bijpm7HhCRg6DwDSz25SrTcA5vA8aqQZ6ngCssNx85Yiu0Op9OpM="
+
 deploy:
   provider: heroku
   buildpack: python

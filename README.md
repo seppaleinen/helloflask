@@ -1,4 +1,6 @@
 <a href='https://coveralls.io/r/seppaleinen/flask?branch=master'><img src='https://coveralls.io/repos/seppaleinen/flask/badge.svg?branch=master' alt='Coverage Status' /></a>
+<a href="https://landscape.io/github/seppaleinen/flask/master">
+  <img alt="Code Health" src="https://landscape.io/github/seppaleinen/flask/master/landscape.svg?style=flat"/></a>
 
 # Flask testapp
 

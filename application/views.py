@@ -1,5 +1,3 @@
-import subprocess
-from flask import url_for
 from application import app
 
 @app.route("/")

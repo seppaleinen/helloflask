@@ -3,7 +3,7 @@
 <a href="https://landscape.io/github/seppaleinen/flask/master">
   <img alt="Code Health" src="https://landscape.io/github/seppaleinen/flask/master/landscape.svg?style=flat"/></a>
 <img src="https://travis-ci.org/seppaleinen/flask.svg" data-bindattr-817="817" title="Build Status Images">
-<img class="wio-badge" data-original-title="Show badge urls" data-toggle="tooltip" data-placement="right" ng-src="/static/2.20/badges/flat/insecure.svg" ng-click="displayBadge = !displayBadge" src="/static/2.20/badges/flat/insecure.svg">
+<a href="https://requires.io/github/seppaleinen/flask/requirements/?branch=master"><img src="https://requires.io/github/seppaleinen/flask/requirements.svg?branch=master" alt="Requirements Status" /></a>
 
 # Flask testapp
 

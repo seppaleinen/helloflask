@@ -2,6 +2,7 @@
 <a href="https://codecov.io/github/seppaleinen/flask?branch=master"><img src="https://codecov.io/github/seppaleinen/flask/coverage.svg?branch=master" alt="Coverage via codecov.io" /></a>
 <a href="https://landscape.io/github/seppaleinen/flask/master">
   <img alt="Code Health" src="https://landscape.io/github/seppaleinen/flask/master/landscape.svg?style=flat"/></a>
+<img src="https://travis-ci.org/seppaleinen/flask.svg" data-bindattr-817="817" title="Build Status Images">
 
 # Flask testapp
 

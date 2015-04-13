@@ -2,3 +2,4 @@ Flask
 coverage
 coveralls
 gunicorn==19.3.0
+codecov

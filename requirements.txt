@@ -2,4 +2,4 @@ Flask==0.10.1
 coverage==3.7.1
 coveralls==0.5
 gunicorn==19.3.0
-codecov==1.1.7
+codecov==1.1.8

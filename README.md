@@ -5,21 +5,33 @@
 <img src="https://travis-ci.org/seppaleinen/flask.svg" data-bindattr-817="817" title="Build Status Images">
 <a href="https://requires.io/github/seppaleinen/flask/requirements/?branch=master"><img src="https://requires.io/github/seppaleinen/flask/requirements.svg?branch=master" alt="Requirements Status" /></a>
 
-# Flask testapp
+#Flask testapp
 
-#to run server
+###To run flask server running on localhost:5000
+`
 python runserver.py
- * Running on http://localhost:5000/
+`
 
-#to run tests
+###To start gunicorn server running on localhost:8000
+`
+gunicorn --config=gunicorn.config.py wsgi:app
+`
+
+###To run tests
+`
 python runtests.py
+`
 
-#to run tests with coverage
+###To run tests with coverage
+`
 coverage run --source application runtests.py
+`
 
-#to see coverage result
-coverage report -m #For text output
-coverage html #For html output
+###To see coverage result
 
-#to install dependencies
+`coverage report -m ` For text output
+`coverage html` For html output
+
+###To install dependencies
+`
 pip install -r requirements.txt
